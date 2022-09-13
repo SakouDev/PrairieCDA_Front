@@ -1,9 +1,6 @@
-const url = 'http://localhost:5000';
-
 import axios from 'axios'
 
-
-
+const url = 'http://localhost:5000';
 
 const ApiService = {
     init() {},
@@ -19,7 +16,6 @@ const ApiService = {
         return axios
             .post(`${url}/api/${ressource}`, data)
     },
-
     put(ressource, data) {
         return axios
             .put(`${url}/api/${ressource}`, data)
