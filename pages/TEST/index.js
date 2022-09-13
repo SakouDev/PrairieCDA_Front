@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import FormAnimal from "../../components/forms/animal"
-import FormCustomer from "../../components/forms/customer"
+import FormAnimal from "../../components/forms/animals"
+import FormCustomer from "../../components/forms/customers"
 import {ApiService} from "../api/axios"
 
 export default function Menfou() {
@@ -8,8 +8,8 @@ export default function Menfou() {
   const [animals, setAnimals] = useState([])
 
   useEffect(() => {
-    ApiService.get('customer').then(response => setCustomers(response.data))
-    ApiService.get('animal').then(response => setAnimals(response.data))
+    ApiService.get('customers').then(response => setCustomers(response.data))
+    ApiService.get('animals').then(response => setAnimals(response.data))
   }, [])
 
   return (
@@ -18,9 +18,9 @@ export default function Menfou() {
       <FormAnimal/>
 
       <h1>CUSTOMER : </h1>
-      {customers.map( (customer, index) => ( 
+      {customers.map( (customers, index) => ( 
         <ul key={index}>
-          <li>{customer.firstname}, {customer.lastname}, {customer.address}, {customer.mail}</li>
+          <li>{customers.firstname}, {customers.lastname}, {customers.address}, {customers.mail}</li>
         </ul>
       ))}
       

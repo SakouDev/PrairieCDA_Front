@@ -17,7 +17,7 @@ export default function FormAnimal() {
             },
             data : data,
         }
-        ApiService.post('animal', data)
+        ApiService.post('animals', data)
     }
 
     return (

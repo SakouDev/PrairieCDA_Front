@@ -17,7 +17,7 @@ export default function FormCustomer() {
         },
         data : data,
         }
-        ApiService.post('customer', data)
+        ApiService.post('customers', data)
     }
 
     return (
