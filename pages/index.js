@@ -1,18 +1,9 @@
-import Link from 'next/link'
-import {Fragment} from 'react'
+import NavBar from "../components/navbar/nav"
+export default function Menfou() {
 
-
-function Home() {
   return (
     <>
-
-    <ul>
-      <li><Link href={'./TEST'}>TEST G DIT</Link></li>
-      <li>OUI LA VIE</li>
-    </ul>
-
+      <NavBar/>
     </>
   )
 }
-
-export default Home

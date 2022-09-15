@@ -22,7 +22,7 @@ const ApiService = {
     },
     delete(ressource, data) {
         return axios
-            .delete(`${url}/api/${ressource}`, data)
+            .delete(`${url}/api/${ressource}/${data}`)
     },
 }
 
